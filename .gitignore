@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude local files
+.claude/CLAUDE.local.md
+.claude/settings.local.json
+
+/src/generated/prisma
+
+# Database files
+prisma/*.db
+prisma/*.db-journal
+
+# env example is safe to commit
+!.env.example
