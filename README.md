@@ -2,6 +2,8 @@
 
 > **Built entirely with [Claude AI](https://claude.ai/code)** — from database schema to UI components, auth system to Stripe integration, all generated through AI-assisted development.
 
+### [🌐 Live Demo →](https://full-stack-e-commerce-platform-using-claude-a-hamaslis-projects.vercel.app)
+
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?logo=tailwindcss)
