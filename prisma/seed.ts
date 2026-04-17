@@ -1,8 +1,11 @@
 import { PrismaClient } from "@prisma/client";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { Pool } from "pg";
 
-const adapter = new PrismaLibSql({ url: "file:./prisma/dev.db" });
-const prisma = new PrismaClient({ adapter } as never);
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_PRISMA_URL ?? process.env.DATABASE_URL!,
+});
+const prisma = new PrismaClient({ adapter: new PrismaPg(pool) });
 
 async function main() {
   await prisma.product.deleteMany();
@@ -76,7 +79,7 @@ async function main() {
     ],
   });
 
-  console.log("✅ Database seeded with 8 products");
+  console.log("✅ Seeded 8 products to Neon PostgreSQL");
 }
 
 main()
